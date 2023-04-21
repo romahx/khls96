@@ -1,2 +1,4 @@
-SECRET_KEY = 'sav644dsv64d6sv46asd4v___dsfs'
-SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost:5432/app_db'
+try:
+    from local_settings import *
+except ImportError:
+    pass
