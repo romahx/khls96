@@ -12,16 +12,19 @@
 	в каталог:</font></font></p>
 	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">cd khls96</span></font></font></code></pre>
 	<li><p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Установить виртуальное окружение:</font></font></p>
-	<<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">virtualenv env</span></font></font></code></pre>
+	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">virtualenv env</span></font></font></code></pre>
 	<li><p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">Активировать виртуальную среду:</font></font></p>
 	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">source env/bin/activate</span></font></font></code></pre>
 	<li><p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">В	виртуальном окружении установить зависимости с помощью pip:</font></font></p>
 	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">pip install -r requirements.txt</span></font></font></code></pre>
 	<p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">При
 	необходимости обновить pip.</font></font></p>
-	<li><p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">В
-	файле config.py настраиваем доступ к существующей базе данных:</font></font></p>
-	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">SQLALCHEMY_DATABASE_URI = 'postgresql://root:pass@host:port/my_db', где:</span></font></font></code></pre>
+	<li><p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">В корневом каталоге создаем файл local_settings.py и прописываем конфигурационные параметры(пример см. в файле local_settings.example.py):</font></font></p>
+	<pre class="western" style="text-align: left"><code class="western"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt"><span style="font-weight: normal">SECRET_KEY = 'key'
+SQLALCHEMY_DATABASE_URI = 'postgresql://root:pass@host:port/my_db'</span></font></font></code></pre>
+	<p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">где:</font></font></p>
+	<p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">-
+	key — секретный ключ;</font></font></p>
 	<p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">-
 	root — имя пользователя;</font></font></p>
 	<p align="left" style="line-height: 100%; margin-bottom: 0cm"><font face="Liberation Serif, serif"><font size="4" style="font-size: 14pt">-
